@@ -1,5 +1,4 @@
 import Expense from "./components/EXPENSES/Expense";
-import ExpensesFilter from "./components/NewExpense/ExpenseFilter";
 import NewExpense from "./components/NewExpense/NewExpense";
 const App = ()=> {
   const expenses = [
@@ -28,14 +27,9 @@ const App = ()=> {
     console.log(expense)
   }
 
-  const getFilter = filter =>{
-
-    console.log(filter);
-  }
 
   return (
     <div>
-      <ExpensesFilter onFilter={getFilter}/>
       <NewExpense onGetExpense={getExpense}/>
       <Expense expenses_most={expenses} />
     </div>
